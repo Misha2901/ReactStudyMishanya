@@ -1,24 +1,39 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import UserData from './components/UserData'
+import LoadingPersonsData from './components/OnLoadingUserData'
 
 function App() {
+
+  const DataLoading = LoadingPersonsData(UserData);
+
+  const [appState, SetAppState] = useState(
+    {
+      loading: false,
+      persons: null,
+    }
+  );
+
+
+  useEffect(() => {
+    SetAppState({ loading: true })
+    const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+    axios.get(apiUrl).then((resp) => {
+      const allPersons = resp.data;
+      SetAppState({
+        loading: false,
+        persons: allPersons
+      });
+    })
+  }, [SetAppState])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <DataLoading isLoading={appState.loading} persons={appState.persons}  />
+
+    </div >
   );
 }
 
