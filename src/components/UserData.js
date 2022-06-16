@@ -14,10 +14,10 @@ export default function UserData(props) {
 
                 persons.map((user) =>
                     <><div className="userCards" key={user.id}>
-                        <p>name:{user.name}</p>
-                        <p>username:{user.username}</p>
-                        <p>useremail:{user.email}</p>
-                        <p>usercity:{user.address.city}</p>
+                        <div className="card"><p>name:{user.name}</p></div>
+                        <div className="card"><p>username:{user.username}</p></div>
+                        <div className="card"><p>useremail:{user.email}</p></div>
+                        <div className="card"><p>usercity:{user.address.city}</p></div>
                     </div><hr /></>
 
 

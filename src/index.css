@@ -17,14 +17,21 @@ code {
   text-align: center;
   color: black;
   height: 100%;
-  width: 100%;
-  background-color: aqua;
+  width: 1805px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 10px;
+  contain: content;
 }
 
 .userCards {
   margin: 10px;
   padding: 10px;
+  background-color: aqua;
+
+}
+
+.card {
+  margin: 10px;
+
 }
