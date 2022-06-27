@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import './styles.css';
+import { Link } from "react-router-dom";
 
 function Albums() {
 
@@ -22,16 +23,17 @@ function Albums() {
             {
                 albums.map((album) => {
                     return (
-                        <div className="album">
-                            <div>Id : {album.id}</div>
-                            <div>Title : {album.title}</div>
-                        </div>
+                        <Link key={album.id} to={`/albums/${album.id}/photo`} className='album'>
+                            <><div>Id: {album.id}</div><div>Title: {album.title}</div></>
+                        </Link>
                     )
                 })
             }
 
-        </div>
+        </div >
     )
 }
 
 export default Albums;
+
+
