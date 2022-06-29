@@ -19,3 +19,13 @@
     background-color: rgb(138, 108, 108);
 
 }
+
+.button {
+    border-color: black;
+    background: transparent;
+ padding: 0px 20px;
+}
+
+.main-button {
+    background-color: rgb(138, 108, 108);
+}

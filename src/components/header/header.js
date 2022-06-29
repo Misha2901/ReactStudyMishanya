@@ -1,13 +1,14 @@
 import './styles.css'
+import { Link } from 'react-router-dom';
 
 function Header() {
 
     return (
 
         <div className='header'>
-            <a href='/'>Home</a>
-            <a href='Users'>Users</a>
-            <a href='Albums'>Albums</a>
+            <Link to='/'>Home</Link>
+            <Link to='Users'>Users</Link>
+            <Link to='Albums'>Albums</Link>
         </div>
     )
 }
