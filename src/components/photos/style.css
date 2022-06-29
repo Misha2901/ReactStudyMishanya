@@ -1,0 +1,31 @@
+.photo {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.img1 {
+    width: 300px;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(138, 108, 108);
+
+}
+
+.button {
+    border-color: black;
+    background: transparent;
+ padding: 0px 20px;
+}
+
+.main-button {
+    background-color: rgb(138, 108, 108);
+}

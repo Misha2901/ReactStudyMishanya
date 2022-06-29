@@ -1,0 +1,17 @@
+.header {
+    background-color: black;
+    color: aliceblue;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.header>a {
+    padding: 10px;
+}
+a:hover{
+    color: aqua;
+}
